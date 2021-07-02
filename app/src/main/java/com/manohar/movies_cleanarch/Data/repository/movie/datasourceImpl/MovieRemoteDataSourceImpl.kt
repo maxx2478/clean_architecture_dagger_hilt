@@ -11,6 +11,6 @@ class MovieRemoteDataSourceImpl(
     private val apikey: String
 ) : MovieRemoteDataSource {
     override suspend fun getMovies(): Response<MovieList> =
-         tmdpService.getPopularMovies(BuildConfig.API_KEY)
+         tmdpService.getPopularMovies(apikey, "en-US")
 
 }

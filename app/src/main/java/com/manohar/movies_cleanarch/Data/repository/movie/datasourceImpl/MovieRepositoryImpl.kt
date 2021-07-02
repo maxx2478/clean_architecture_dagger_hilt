@@ -34,7 +34,7 @@ class MovieRepositoryImpl(
             val body = response.body()
             if (body!=null)
             {
-                movielist = body.movies
+                movielist = body.results
             }
         }
         catch (exception: Exception)
