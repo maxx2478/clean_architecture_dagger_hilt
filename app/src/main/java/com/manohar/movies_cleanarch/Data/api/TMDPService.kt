@@ -10,7 +10,7 @@ import retrofit2.http.Query
 
 interface TMDPService {
 
-    @GET("movie/popular")
+    @GET("movie/popular?")
     suspend fun getPopularMovies(@Query("api_key") apikey: String): Response<MovieList>
 
     @GET("tv/popular")

@@ -4,8 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.manohar.movies_cleanarch.Domain.usecases.GetMoviesUseCase
 import com.manohar.movies_cleanarch.Domain.usecases.UpdateMoviesUseCase
+import javax.inject.Inject
 
-class MovieViewModelFactory(
+class MovieViewModelFactory @Inject constructor(
     private val getMoviesUseCase: GetMoviesUseCase,
     private val updateMoviesUseCase: UpdateMoviesUseCase
 ) : ViewModelProvider.Factory {

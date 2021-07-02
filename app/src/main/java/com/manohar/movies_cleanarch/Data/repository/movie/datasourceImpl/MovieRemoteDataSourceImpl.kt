@@ -1,5 +1,6 @@
 package com.manohar.movies_cleanarch.Data.repository.movie.datasourceImpl
 
+import com.manohar.movies_cleanarch.BuildConfig
 import com.manohar.movies_cleanarch.Data.api.TMDPService
 import com.manohar.movies_cleanarch.Data.model.movie.MovieList
 import com.manohar.movies_cleanarch.Data.repository.movie.datasource.MovieRemoteDataSource
@@ -10,6 +11,6 @@ class MovieRemoteDataSourceImpl(
     private val apikey: String
 ) : MovieRemoteDataSource {
     override suspend fun getMovies(): Response<MovieList> =
-         tmdpService.getPopularMovies(apikey)
+         tmdpService.getPopularMovies(BuildConfig.API_KEY)
 
 }
